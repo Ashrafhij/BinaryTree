@@ -1,36 +1,15 @@
-<div dir="rtl" lang="he">
+Binary trees, and the three ways to go through them: pre-order, order, re-order. In this task the goal is to realize a binary tree with possible iterators to go through it in all three arrangements.
 
-# עץ בינארי עם איטרטורים
+Department Name: BinaryTree. Methods required:
+*add_root - receives one input and places it at the root of the tree, If there is already something in the root, it is replaced.
+*add_left - Receives two inputs: The first input indicates something that already exists in the tree, The second input indicates something new to be added as his left child (if he already has a left child - his content should be replaced).
+*add_right - Same as above, only the extension is as the right child.
+*begin_preorder (), end_preorder () - Returns iterators to move in order of preorder (parent - left - right).
+*begin_inorder (), end_inorder () - Returns iterators to move in order in order (left - parent - right).
+*begin_postorder (), end_postorder () - Returns iterators for switching in order order (left - right - parent).
+*Output operator - prints the Tree in logical format.
 
-בקורס קודם למדתם (או הייתם אמורים ללמוד) על עצים בינאריים, ועל שלושת הדרכים לסייר בהם:
-preorder, inorder, postorder.
-במטלה הזאת המטרה היא לממש עץ בינארי עם איטרטורים שיכולים לעבור עליו בכל שלושת הסדרים.
+More Details:
+The tree is not necessarily arranged in ascending order, nor is it balanced. The order of the data in the tree is according to the way they are inserted.
+In add_left, add_right functions, if the first input does not exist in the tree - an exception must be thrown. If it exists twice or more - choose one of the two options and add there (in the automatic tests do not enter such situations, so that the result will be unambiguous).
 
-שם המחלקה: `BinaryTree`.
-השיטות הדרושות (ראו בקובץ [Demo.cpp](Demo.cpp) לפרטים):
-
-* `add_root` - מקבלת קלט אחד ושמה אותו בשורש של העץ. אם כבר יש משהו בשורש, הוא מוחלף.
-* `add_left` - מקבלת שני קלטים: הקלט הראשון מציין דבר שכבר קיים בעץ. הקלט השני מציין דבר חדש שיש להוסיף בתור הילד השמאלי שלו (אם כבר יש לו ילד שמאלי - יש להחליף את התוכן שלו). 
-* `add_right` - כנ"ל, רק שהתוספת היא בתור הילד הימני.
-* `begin_preorder()`, `end_preorder()` - מחזירות איטרטורים לצורך מעבר בסדר preorder (אב - שמאל - ימין).
-* `begin_inorder()`, `end_inorder()` - מחזירות איטרטורים לצורך מעבר בסדר inorder (שמאל - אב - ימין).
-* `begin_postorder()`, `end_postorder()` - מחזירות איטרטורים לצורך מעבר בסדר postorder (שמאל - ימין - אב).
-* אופרטור פלט - מדפיס את העץ בפורמט הגיוני כלשהו לבחירתכם.
-
-תוספות לחלק ב:
-* **יעילות**: האופרטור צריך להיות יעיל ככל האפשר מבחינת זיכרון. בפרט, אין לשמור את כל תוכן העץ בגוף האיטרטור. נסו למצוא פתרון יעיל יותר.
-* כתבו בנאי מעתיק ואופרטור השמה המבצעים **העתקה עמוקה**, כמו שלמדנו בשיעור 5.
-* כתבו בנאי מעביר ואופרטור העברה המבצעים **העתקה שטחית**, כמו שלמדנו בשיעור על פוינטרים חכמים.
-* הפקודות `make test1`, `make test2`, `make test3`, `make tidy`, `make valgrind` צריכות לעבוד ללא שגיאות.
-* כתבו תוכנית ראשית יצירתית לצורך הדגמה; לצורך התוכנית, השתמשו באלגוריתמים לבחירתכם מהספריה התקנית.
-
-
-אין לשנות את הקבצים הנתונים, אלא רק להוסיף קבצים חדשים.
-
-יש לפתור את המטלה באופן עצמאי.
-
-* מותר להתייעץ עם סטודנטים אחרים או לחפש מידע באינטרנט;
-אסור להעתיק קטעי-קוד שלמים מסטודנטים אחרים או מהאינטרנט.
-* יש לדווח על כל עזרה שקיבלתם, מסטודנטים אחרים או מהאינטרנט, בהתאם ל[תקנון היושר של המחלקה](https://www.ariel.ac.il/wp/cs/wp-content/uploads/sites/88/2020/08/Guidelines-for-Academic-Integrity.pdf).
-
-</div>
