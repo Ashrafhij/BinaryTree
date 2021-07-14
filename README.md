@@ -1,5 +1,5 @@
 
-#Binary trees
+# Binary trees
 
 and the three ways to go through them: pre-order, order, re-order. In this task the goal is to realize a binary tree with possible iterators to go through it in all three arrangements.
 
@@ -12,7 +12,7 @@ Department Name: BinaryTree. Methods required:
 * `begin_postorder` (), * `end_postorder` () - Returns iterators for switching in order order (left - right - parent).
 * `Output operator` - prints the Tree in logical format.
 
-More Details:
+More Details:\n
 The tree is not necessarily arranged in ascending order, nor is it balanced. The order of the data in the tree is according to the way they are inserted.
 In add_left, add_right functions, if the first input does not exist in the tree - an exception must be thrown. If it exists twice or more - choose one of the two options and add there (in the automatic tests do not enter such situations, so that the result will be unambiguous).
 
